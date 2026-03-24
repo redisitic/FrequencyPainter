@@ -301,7 +301,7 @@ class ZoomableCanvas(tk.Canvas):
         return arr
 
     def _paint_watermark(self, cx, cy):
-        """Stamp the RGBA watermark tile centred at (cx, cy).
+        """Stamp the RGBA watermark tile centerd at (cx, cy).
         Per-pixel alpha from the RGBA image × global intensity controls blend weight.
         """
         tile    = self._get_wm_tile()          # float32 H x W x 4
@@ -309,7 +309,7 @@ class ZoomableCanvas(tk.Canvas):
         h, w    = self._draw_arr.shape[:2]
         global_intensity = self._brush["intensity"]
 
-        # destination rect (tile centred on cursor)
+        # destination rect (tile centerd on cursor)
         dst_x0 = int(cx) - tw // 2
         dst_y0 = int(cy) - th // 2
         dst_x1 = dst_x0 + tw

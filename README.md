@@ -16,7 +16,7 @@ This also makes it a practical tool for **frequency-domain steganography**: hidi
 
 Hiding data in pixel values (LSB substitution) is detectable in seconds. The pixel histogram develops a measurable statistical anomaly. The frequency domain offers better hiding spots:
 
--   **DC component** (centre pixel after fftshift): controls global average brightness. Tiny perturbations here are invisible and survive most processing pipelines.
+-   **DC component** (center pixel after fftshift): controls global average brightness. Tiny perturbations here are invisible and survive most processing pipelines.
 -   **Low-frequency ring**: broad colour and luminance gradients. Small edits are perceptually imperceptible and robust to mild compression.
 -   **Phase spectrum**: the magnitude image looks completely unchanged. Phase carries all spatial structure and is almost never inspected.
 
